@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "fastify": "^4.18.0",
+    "knex": "^2.4.2",
+    "sqlite3": "^5.1.6"
+  },
+  "name": "fastify",
+  "type": "module",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch ./src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "vitest": "^0.32.2"
+  }
+}
