@@ -75,6 +75,10 @@ app.post('/', async (req,res) => {
     const { title, value, type, user_id } = getUserParams.parse(req.body);
     const id = randomUUID();
     try{
+        const userExists = await knex('users').where('id', user_id).select('*');
+        if(userExists.length === 0) {
+            return res.status(400).send(error);
+        }
         await knex('transactions').insert({
             id,
             title,
